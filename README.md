@@ -16,11 +16,19 @@ A função `validarCartaoCredito` utiliza expressões regulares para verificar s
 - **Discover**: /^6(?:011|5[0-9]{2})[0-9]{12}$/
 - **Diners Club**: /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/
 - **JCB**: /^(?:2131|1800|35\d{3})\d{11}$/
+- **Hipercard**: /^(606282\d{10}(\d{3})?|3841\d{15})$/
+- **Enroute**: /^2(014|149)\d{11}$/
+- **Aura**: /^50[0-9]{14,17}$/
+- **Voyager**: /^8699[0-9]{11}$/
 
 ### Exemplo de Uso
 
 ```javascript
-const numeroCartao = "5111111111111111";
+const numeroCartao = "6062829999999999";
 const bandeira = validarCartaoCredito(numeroCartao);
 console.log(`A bandeira do cartão é: ${bandeira}`);
 ```
+
+### Como Executar
+
+Para executar o código, basta abrir o arquivo [src/index.js](src/index.js) em um ambiente de execução JavaScript e rodar o script. O resultado será exibido no console.
